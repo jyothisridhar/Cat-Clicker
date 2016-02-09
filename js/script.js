@@ -4,7 +4,7 @@ var counter = 0;
 for (var i = 0; i < names.length; i++) {
 	var kittyName = names[i];
 
-	var elem = document.createElement('li');
+	var elem = document.createElement('button');
 	elem.textContent = kittyName;
 
 	elem.addEventListener('click', (function(nameCopy){
@@ -13,6 +13,8 @@ for (var i = 0; i < names.length; i++) {
 			document.getElementById('kitty-img').src = filename;
 			document.getElementById('catName');
 			catName.textContent = nameCopy;
+			counter = 0;
+			document.getElementById('clicks').textContent = "No of clicks:" + counter;
 		}
 	})(kittyName));
 
@@ -22,8 +24,6 @@ for (var i = 0; i < names.length; i++) {
 
 var kittyPic = document.getElementById('kitty-img');
 kittyPic.addEventListener('click', function(){
-	// return function() {
 		counter++;
 		document.getElementById('clicks').textContent = "No of clicks:" + counter;
-	//}
 });
