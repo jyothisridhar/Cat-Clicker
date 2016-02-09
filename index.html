@@ -3,6 +3,7 @@
 <head>
 	<meta charset="UTF-8">
 	<title>Cannot be lamer than this!</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" href="css/style.css">
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
 </head>
@@ -10,14 +11,30 @@
 <body>
 	<div id="kitty-list" class="row text-center">
 		<h1>Cat Clickr</h1>
-		<p>Click on the cat and collect cliks!</p>
 	</div>
-	<div id="kitty-display" class="text-center">
-		<img id="kitty-img" class="center-block" src="">
-		<p id="catName"></p>
-		<p id="clicks"></p>
+	<div id="kitty-display" class="row kitty-display">
+		<div class="col-md-6 cat-view text-center">
+			<hr>
+			<img id="kitty-img" class="center-block" src="">
+			<p id="catName"></p>
+			<p id="clicks"></p>
+		</div>
+		<div class="col-md-6">
+			<hr>
+			<button id="admin-button">Admin</button><br>
+			<form id="admin-form">
+				Cat Name:<br>
+				<input id="cat-name" name="catname"><br>
+				Url:<br>
+				<input id="url" name="url"><br>
+				Click Counter:<br>
+				<input id="counter" nam="counter"><br>
+			</form>
+			<button id="cancel">Cancel</button>
+			<button id="save">Save</button>
+		</div>
 	</div>
 
 	<script src="js/libs/jquery-1.12.0.min.js"></script>
-	<script src="js/script.js"></script>
+	<script src="js/app.js"></script>
 </body>
